@@ -94,3 +94,25 @@ $GLOBALS['DB_PASSWORD'] = 'AccessGranted#1';
 
 ![alt text](./images/root_flag.png)
 - Root flag: 9a045d36c5a28f01784bdcfb326accfe
+
+## 🧾 Summary
+
+| Phase | Technique |
+|---|---|
+| Enumeration | Nmap |
+| Web Enumeration | `robots.txt` |
+| Initial Access | Default eXtplorer credentials |
+| Code Execution | PHP web shell |
+| Remote Access | SSH |
+| Credential Discovery | PHP configuration file |
+| Privilege Escalation | Recovered root credentials |
+| Root Access | `ssh root user` |
+| Flags | User and root |
+
+## 🚀 Key Takeaways
+- Default credentials such as `admin:admin` should never be used in production environments.
+- File-management applications should restrict which file types can be uploaded or created.
+- Web-accessible directories should not allow users to upload executable server-side scripts.
+- Sensitive credentials should never be stored in plaintext configuration files.
+- Configuration files containing database or privileged credentials must be properly protected.
+- Reusing privileged credentials across services can turn a single configuration disclosure into full system compromise.
